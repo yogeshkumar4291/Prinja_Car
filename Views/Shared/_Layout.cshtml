@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Prinja_Car_Yard</title>
+    <!--Style-Sheets-->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/components.css" rel="stylesheet" />
+    <link href="~/css/responsee.css" rel="stylesheet" />
+    <link href="~/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="~/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="~/css/template-style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!--Style-Sheets-Ends-->
+    <!--Scripts-->
+    <script src="~/js/jquery-1.8.3.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <script src="~/js/responsee.js"></script>
+    <script src="~/js/template-scripts.js"></script>
+    <!--Script-Ends-->
+</head>
+<body>
+    <header>
+        
+        
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">Prinja Cars</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Customers" asp-action="Index">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Staffs" asp-action="Index">Staff</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Cars" asp-action="Index">Cars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Stores" asp-action="Index">Stores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Buys" asp-action="Index">Buy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <!-- CAROUSEL -->
+        <div id="carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="~/img/gtr35.jpg" alt="">
+                    <div class="line">
+                        <div class="text hide-s">
+                            <div class="line">
+                                <div class="prev-arrow hide-s hide-m">
+                                    <i class="icon-chevron_left"></i>
+                                </div>
+                                <div class="next-arrow hide-s hide-m">
+                                    <i class="icon-chevron_right"></i>
+                                </div>
+                            </div>
+                            <h2>Buy All The New Cars</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/track.jpg" alt="">
+                    <div class="line">
+                        <div class="text hide-s">
+                            <div class="line">
+                                <div class="prev-arrow hide-s hide-m">
+                                    <i class="icon-chevron_left"></i>
+                                </div>
+                                <div class="next-arrow hide-s hide-m">
+                                    <i class="icon-chevron_right"></i>
+                                </div>
+                            </div>
+                            <h2>Full-Fill Your Dreams</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/demon.jpg" alt="">
+                    <div class="line">
+                        <div class="text hide-s">
+                            <div class="line">
+                                <div class="prev-arrow hide-s hide-m">
+                                    <i class="icon-chevron_left"></i>
+                                </div>
+                                <div class="next-arrow hide-s hide-m">
+                                    <i class="icon-chevron_right"></i>
+                                </div>
+                            </div>
+                            <h2>Advance & Upgraded</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <section>
+        <!--Contact Us Form-->
+        <div id="contact">
+            <div class="line">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="margin">
+                    <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
+                        <img src="img/oo.jpg" alt="">
+                    </div>
+                    <div class="s-12 m-12 l-4 margin-bottom right-align">
+                        
+                        <address>
+                            <p><strong>Adress:</strong> 1D Beaumont St Hamilton East</p>
+                            <p><strong>Country:</strong> Hamilton - New Zealand</p>
+                            <p><strong>E-mail:</strong> info@prinjacaryard.com</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MAP -->
+        <div id="map-block">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1mhGsju95P4N5bIGHHMyoZCeGbXg&hl=en" width="100%" height="450" frameborder="0" style="border:0"></iframe>
+        </div>
+    </section>
+
+    <footer class="border-top footer text-muted">
+        <div class="line">
+            <div class="s-12 l-6">
+                <p>Copyright 2015, Car Management - Project</p>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+    <script src="~/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            var theme_slider = $("#owl-demo");
+            $("#owl-demo").owlCarousel({
+                navigation: false,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                autoPlay: 6000,
+                addClassActive: true,
+                // transitionStyle: "fade",
+                singleItem: true
+            });
+            $("#owl-demo2").owlCarousel({
+                slideSpeed: 300,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["&#xf007", "&#xf006"],
+                pagination: false,
+                singleItem: true
+            });
+
+            // Custom Navigation Events
+            $(".next-arrow").click(function () {
+                theme_slider.trigger('owl.next');
+            })
+            $(".prev-arrow").click(function () {
+                theme_slider.trigger('owl.prev');
+            })
+        });
+    </script>
+</body>
+</html>
